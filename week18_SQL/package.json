@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "week18_sql",
   "version": "1.0.0",
   "description": "",
@@ -11,6 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@types/pg": "^8.15.4",
+    "pg": "^8.16.0",
     "typescript": "^5.8.3"
   }
 }
