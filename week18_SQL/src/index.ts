@@ -24,7 +24,9 @@ app.post("/signup", async (req, res) => {
         const response = await pgClient.query(insertQuery, [username, password, email]);
 
         const addressInsertQuery = `INSERT INTO address (city, country, street, pincode, user_id) VALUES ($1, $2, $3);`
-        
+
+        const addressInsertResponse = await pgClient.query(addressInsertQuery, [city, country, street, pincode]);
+
         res.json({
             message: "You have successfully signed up",
     })
