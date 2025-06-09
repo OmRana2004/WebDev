@@ -22,6 +22,10 @@ app.post("/signup", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     const username = req.body.username;
     const password = req.body.password;
     const email = req.body.email;
+    const city = req.body.city;
+    const country = req.body.country;
+    const street = req.body.street;
+    const pincode = req.body.pincode;
     try {
         const insertQuery = `INSERT INTO users (username, password, email) VALUES ($1, $2, $3);`;
         const response = yield pgClient.query(insertQuery, [username, password, email]);
