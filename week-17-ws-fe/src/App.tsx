@@ -31,4 +31,3 @@ function App() {
 
 export default App;
 
-// To run this code, ensure you have a WebSocket server running on ws://localhost:8080.
