@@ -38,5 +38,4 @@ export default App;
 // @ts-ignore
 // @ts-ignore
 // @ts-ignore
-// @ts-ignore
 
