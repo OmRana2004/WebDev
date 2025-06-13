@@ -36,5 +36,4 @@ export default App;
 // @ts-nocheck
 // @ts-ignore
 // @ts-ignore
-// @ts-ignore
 
