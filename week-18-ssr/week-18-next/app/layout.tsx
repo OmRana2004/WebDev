@@ -34,4 +34,4 @@ export default function RootLayout({
   );
 }
 // componentes are used to store a resuable contact informations to reduces to collective code. what are World State in ETH.
-//is ues dto cpllective code and to reuses the code. by functionally implementation of the code.
+//is ues dto cpllective code and to reuses the code. by functionally 
