@@ -33,4 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
-// componentes are used to store a resuable contact 
+// componentes 
