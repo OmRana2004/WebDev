@@ -33,4 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
-// componentes are used to store a resuable contact informations to reduces to collective code. what are World State in ET
+// componentes are used to store a resuable contact 
