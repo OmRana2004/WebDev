@@ -1,5 +1,6 @@
 import Counter from './Counter'
 import Timer from './Timer'
+import LinkedinTopbar from './linkedinTopbar'
 import './App.css'
 
 
@@ -7,8 +8,9 @@ function App() {
   
   return (
       <div>
-        <Counter />
+        {/* <Counter /> */}
         {/* <Timer /> */}
+        <LinkedinTopbar />
       </div>
   )
 }
