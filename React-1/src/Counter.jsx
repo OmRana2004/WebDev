@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Counter() {
+    // Initilazing A useState
     const [count, setCount] = useState(0);
     return (
         <div>
