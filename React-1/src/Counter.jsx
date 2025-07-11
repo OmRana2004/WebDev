@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Counter() {
     // Initilazing A useState
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);// It is State
     return (
         <div>
             <h2>Count: {count}</h2>
