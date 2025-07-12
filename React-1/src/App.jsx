@@ -9,7 +9,7 @@ function App() {
   
   return (
       <div>
-        {/* <Counter /> */}
+        <Counter />
         {/* <Timer /> */}
         {/* <LinkedinTopbar /> */}
         <Error_Boundary />
