@@ -1,6 +1,7 @@
 import Counter from './Counter'
 import Timer from './Timer'
 import LinkedinTopbar from './linkedinTopbar'
+import Error_Boundary from './Error_Boundary'
 import './App.css'
 
 
@@ -10,7 +11,8 @@ function App() {
       <div>
         {/* <Counter /> */}
         {/* <Timer /> */}
-        <LinkedinTopbar />
+        {/* <LinkedinTopbar /> */}
+        <Error_Boundary />
       </div>
   )
 }
