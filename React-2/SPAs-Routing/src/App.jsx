@@ -5,11 +5,14 @@ function App () {
   return (
     <div>
       <BrowserRouter>
-      <Link to="/first/name">OM</Link> | <Link to="/last/name">RANA</Link> | <Link to="/full/name">OM RANA</Link>
+      <Link to="/first/name">First Name</Link> | <Link to="/last/name">Last Name</Link> | <Link to="/full/name">Full Name</Link> 
+      <Link to="/"><button>HOME</button></Link>
+      <Link to="*"></Link>
       <Routes>
         <Route path="/first/name" element= {<FirstName />} />
         <Route path="/last/name" element= {<LastName />} />
         <Route path="/full/name" element= {<FullName />} />
+        <Route path="*" element= {<ErrorPage />} />
       </Routes>
       </BrowserRouter>
     </div>
@@ -35,7 +38,15 @@ const LastName = () =>{
 const FullName = () => {
   return(
     <div>
-      OM RANA
+         OM RANA
+    </div>
+  )
+}
+
+const ErrorPage = () => {
+  return(
+    <div>
+        page not found
     </div>
   )
 }
