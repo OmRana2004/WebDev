@@ -1,8 +1,10 @@
-import Counter from './Counter'
-import Timer from './Timer'
-import LinkedinTopbar from './linkedinTopbar'
+import Counter from './hooks/useState/Counter'
+import Timer from './hooks/useEffect/UserData'
+import LinkedinTopbar from './hooks/useState/LinkedinTopbar'
 import Error_Boundary from './Error_Boundary'
 import './App.css'
+import UserData from './hooks/useEffect/UserData'
+import Cr from './cr/CR'
 
 
 function App() {
@@ -10,9 +12,10 @@ function App() {
   return (
       <div>
         <Counter />
-        {/* <Timer /> */}
+        {/* <UserData /> */}
         {/* <LinkedinTopbar /> */}
-        <Error_Boundary />
+        {/* <Error_Boundary /> */}
+        <Cr />  
       </div>
   )
 }
