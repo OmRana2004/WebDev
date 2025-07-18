@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.css";
+
+const useDebounce = (value, delay) =>{
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect (()=> {
+    const handler = setTimeout(() =>{
+      setDebouncedValue(value);
+    }, delay);
+    return () =>{
+      clearTimeout(handler);
+    }
+  }, [value, delay]);
+
+  return debouncedValue;
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [inputVal, setInputVal] = useState("");
+  const debouncedValue = useDebounce(inputVal, 200)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  function change(e) {
+    setInputVal(e.target.value)
+  }
+
+  useEffect(() =>{
+    console.log("expemsive operation");
+  }, [debouncedValue])
+
+  return(
+   <>
+   <input id="input" type="text" onChange={change}/>
+   </>
   )
 }
 
-export default App
+export default App;
