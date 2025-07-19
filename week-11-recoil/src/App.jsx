@@ -45,7 +45,31 @@ function IsEven() {
 
   return <div>{even ? "Even" : "Odd"}</div>;
 }
+  /*
+  const fontSizeState = atom({
+  key: 'fontSizeState',
+  default: 14
+  })
 
-// is function is called by its instances and is to reduces and code by its values.
+  const fontSizeLableState = selector({
+  key: 'fontSizeLableState',
+  get: ({get}) => {
+    const fontSize = get(fontSizeState);
+    const unit = 'px'
+
+    return `${fontSize}${unit}`;  function return (
+    <div> 
+    <textInput />
+    <CharacterCount />
+    </div>
+);
+}
+    
+    )
+
+    // is render to reduces and 
+    }
+  })
+  */
 
 export default App;
