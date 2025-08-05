@@ -20,10 +20,11 @@ function MainApp() {
   return (
     <>
     <button>Home</button>
+    <button onClick={() => setMessingAtomCount (messingAtomCount + 1)}>MessageIncsCount</button>
 
     <button>My network({networkNotificationCount >=100 ? "99+" : networkNotificationCount})</button>
     <button>Jobs ({jobsAtomCount})</button>
-    <button onClick={() => setMessingAtomCount (messingAtomCount + 1)}>Messaging ({messingAtomCount})</button>
+    <button>Messaging ({messingAtomCount})</button>
     <button>Notifications ({notificationsAtomCount})</button>
 
     <button>Me</button>
