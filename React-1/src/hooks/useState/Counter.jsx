@@ -1,16 +1,18 @@
 import { useState } from "react";
 
-function Counter () {
+function Counter() {
+  const [count, setCount] = useState(0);
 
-    const [count, setCount] = useState(0);
-    return (
-        <div>
-            <h2>Count:{count}</h2>
-            <button onClick={() => setCount (count+1)}>Increace Count</button>
-            
-            <button onClick={() => setCount (count-1)}>Decerese Count</button>
-        </div>
-    )
+  return (
+    <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <br />
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
+      br  
+      <button onClick={() => setCount(0)}>Reset</button>
+    </div>
+  );
 }
 
 export default Counter;

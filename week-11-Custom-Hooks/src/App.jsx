@@ -21,7 +21,7 @@ function App() {
   const debouncedValue = useDebounce(inputVal, 200)
 
   function change(e) {
-    setInputVal(e.target.value)
+    setInputVal(e.target.value)  
   }
 
   useEffect(() =>{
