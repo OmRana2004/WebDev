@@ -7,6 +7,7 @@ import UserData from './hooks/useEffect/UserData'
 import Cr from './cr/CR'
 import Props from './props_children/Props'
 import Card from './props_children/Card'
+import ProfileCard from './props_children/ProfileCard'
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         {/* <Error_Boundary /> */}
         {/* <Props title="iPhone" price="10000" /> */}
         {/* <Cr />   */}
+         {/* <Props /> */}
+         {/* <ProfileCard /> */}
         {/* <Card /> */}
       </div>
   )

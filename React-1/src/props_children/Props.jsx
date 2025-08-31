@@ -1,10 +1,12 @@
-const Props = ({ title, price }) => {
+function Welcome({name}) {
+    return <h1>hello, {name} Welcome to react.</h1>
+}
+
+function Props() {
     return(
-        <div> 
-            <h2>{title}</h2>
-            <p>Price: {price}</p>
+        <div>
+            <Welcome name="om" />
         </div>
-        
     )
 }
 
