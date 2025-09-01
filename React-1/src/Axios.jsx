@@ -19,12 +19,12 @@ useEffect(() => {
     return(
         <div>
             <h2>Todos Data: </h2>
-            <ul>
+            <ol>
                 {todos.map(todo => {
             return <li key={todo.id} >
                 {todo.title}</li>
         })}
-            </ul>
+            </ol>
 
         
 
