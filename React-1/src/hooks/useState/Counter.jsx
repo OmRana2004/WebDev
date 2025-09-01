@@ -4,15 +4,6 @@ import { useEffect, useState } from "react";
 function Counter() {
   const [count, setCount] = useState (0);
 
-  useEffect(()=> {
-    console.log("RAM");
-
-    return function () {
-      console.log("SITA")
-    }
-
-  }, [count])
-
   return(
     <div>
       <h1>Count:{count}</h1>
