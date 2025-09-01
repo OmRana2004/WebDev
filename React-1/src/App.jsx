@@ -8,6 +8,7 @@ import Cr from './cr/CR'
 import Props from './props_children/Props'
 import Card from './props_children/Card'
 import ProfileCard from './props_children/ProfileCard'
+import Axios from './Axios'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
       <div>
         {/* <Counter /> */}
-        <UserData />
+        {/* <UserData /> */}
         {/* <LinkedinTopbar /> */}
         {/* <Error_Boundary /> */}
         {/* <Props title="iPhone" price="10000" /> */}
@@ -23,6 +24,7 @@ function App() {
          {/* <Props /> */}
          {/* <ProfileCard /> */}
         {/* <Card /> */}
+        <Axios />
       </div>
   )
 }
