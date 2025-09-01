@@ -20,7 +20,7 @@ function App() {
         {/* <Error_Boundary /> */}
         {/* <Props title="iPhone" price="10000" /> */}
         {/* <Cr />   */}
-         {/* <Props /> */}
+         <Props />
          {/* <ProfileCard /> */}
         {/* <Card /> */}
       </div>
