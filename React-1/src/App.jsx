@@ -15,13 +15,13 @@ function App() {
   
   return (
       <div>
-        {/* <Counter /> */}
+        <Counter />
         {/* <UserData /> */}
         {/* <LinkedinTopbar /> */}
         {/* <Error_Boundary /> */}
         {/* <Props title="iPhone" price="10000" /> */}
         {/* <Cr />   */}
-         {/* <Props /> */}
+         <Props />
          {/* <ProfileCard /> */}
         {/* <Card /> */}
         <Axios />

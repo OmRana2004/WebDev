@@ -4,17 +4,13 @@ import axios from "axios";
 function Todo() {
 const [todos, setTodos] = useState([]);
 
-useEffect(() => {
-    // API Axios Calling
-    axios
-    .get("https://jsonplaceholder.typicode.com/todos")
-    .then(res => {
-        setTodos(res.data);
-    })
-    .catch(error => {
-        console.log("Error Found",error)
-    })
-}, []);
+    useEffect(() => {
+        axios
+        .get("https://jsonplaceholder.typicode.com/todos")
+        .then(res =>{
+            setTodos (res.data)
+        })
+    }, [])
 
     return(
         <div>
