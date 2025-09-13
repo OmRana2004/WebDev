@@ -1,11 +1,11 @@
 const Welcome = ({name}) =>{
-  return <h1>Hello {name} Welcome to react.!</h1>
+  return <h1>hello, {name} welcome to react</h1>
 }
 
-function Props(){
+function Props() {
   return(
     <div>
-      <Welcome name="OM" />
+      <Welcome name = "om" />
     </div>
   )
 }

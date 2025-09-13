@@ -1,28 +1,27 @@
-import { useEffect, useState } from "react"
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Todo() {
-const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState([]);
 
-    useEffect(() => {
+    useEffect(() =>{
+
         axios
         .get("https://jsonplaceholder.typicode.com/posts")
         .then(res => {
-            setTodos(res.data)
+            setTodos = res.data
         })
-    })
-
+    }, [])
     return(
-        <div>
-            <h2>Todos Data: </h2>
-            <ul>
-                {todos.map (todo => {
-                   return <li>{todo.title}</li>
-                })}
-            </ul>
-        
+            <div>
+                <h1>TODOS: </h1>
+                <ol>
+                    {todos.map (todo => {
+                        return <li>{todo.title}</li>
+                    })}
+                </ol>
+            </div>
 
-        </div>
     )
 }
 

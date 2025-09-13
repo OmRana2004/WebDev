@@ -1,19 +1,19 @@
-function Profile({ name, age, hobby}){
-    return (
+const Profile = ({name, age, hobby}) => {
+    return(
         <div>
-            <h2>Name: {name}</h2>
-            <p>Age: {age}</p>
+            <h1>Name: {name}</h1>
+            <h2>Age: {age}</h2>
             <p>Hobby: {hobby}</p>
         </div>
     )
 }
 
 function ProfileCard() {
-    return (
+    return(
         <div>
-            <Profile name="om" age={21} hobby="coding" />
+            <Profile name ="OM" age ="21" hobby ="Coding" />
         </div>
     )
 }
 
-    export default ProfileCard;
+export default ProfileCard;
