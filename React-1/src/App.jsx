@@ -1,7 +1,7 @@
 import Counter from './hooks/useState/Counter'
 import Timer from './hooks/useEffect/UserData'
 import LinkedinTopbar from './hooks/useState/LinkedinTopbar'
-import Error_Boundary from './Error_Boundary'
+import Error_Boundary from './ErrorBoundary/Cards'
 import './App.css'
 import UserData from './hooks/useEffect/UserData'
 import Cr from './cr/CR'
@@ -15,16 +15,16 @@ function App() {
   
   return (
       <div>
-        <Counter />
+        {/* <Counter /> */}
         {/* <UserData /> */}
         {/* <LinkedinTopbar /> */}
-        {/* <Error_Boundary /> */}
+        <Error_Boundary />
         {/* <Props title="iPhone" price="10000" /> */}
         {/* <Cr />   */}
          {/* <Props /> */}
-         <ProfileCard />
+         {/* <ProfileCard /> */}
         {/* <Card /> */}
-        <Axios />
+        {/* <Axios /> */}
       </div>
   )
 }
