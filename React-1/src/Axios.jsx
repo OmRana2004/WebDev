@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 function Todo() {
     const [todos, setTodos] = useState([]);
 
-    useEffect(() =>{
-
+    useEffect(() => {
         axios
         .get("https://jsonplaceholder.typicode.com/posts")
         .then(res => {
-            setTodos = res.data
+            setTodos (res.data)
         })
     }, [])
     return(

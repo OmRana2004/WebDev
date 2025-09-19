@@ -1,9 +1,9 @@
-const Welcome = ({name}) =>{
-  return <h1>hello, {name} welcome to react</h1>
+const Welcome = ({name}) => {
+  return( <h1>Hello, {name} Welcome to react</h1> )
 }
 
 function Props() {
-  return(
+  return (
     <div>
       <Welcome name = "om" />
     </div>

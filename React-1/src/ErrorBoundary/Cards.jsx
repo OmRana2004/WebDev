@@ -13,7 +13,8 @@ import ErrorBoundary from "./ErrorBoundary"
                 <Card1 />
             </ErrorBoundary>
 
-            <ErrorBoundary>
+            <ErrorBoundary>// lines to import { connect } from 'react-redux'
+            
                 <Card2 />
             </ErrorBoundary>
         </div>
@@ -39,4 +40,6 @@ function Card2 () {
        
 
 
-export default Cards;
+export default Cards; // IS TO GO IT AND TO COMMIT IT FIRST AND READING TO RUTHLESS AND USED TO GO AND EVEN WAY TO MOVE ON WITH IT. {() => }
+
+// code {{style }} code and its functionallity to reduce functionallity of commmon code..  calle  . code in it and we can do it.
