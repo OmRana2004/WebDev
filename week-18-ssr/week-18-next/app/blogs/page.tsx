@@ -6,12 +6,12 @@ import { useEffect } from "react";
 //     return response.data;
 // }
 
-async function getBlogs() {
-    const response = await axios
-    .get("https://jsonplaceholder.typicode.com/todos/");
-    return response.data;
-}
 
+async function getBlogs() {
+    const res = await
+    axios.get ("https://jsonplaceholder.typicode.com/todos/");
+    return res.data;
+}
 
 export default async function Blogs() {
 
