@@ -1,23 +1,15 @@
 import { useState } from "react"
 
-function Counter (){
-  const [count, setCount] = useState(0);
+function Counter(){
+  const [count, setCount] = useState (0);
   return (
     <div>
+      <h1>Counter:{count}</h1>
 
-    <h1>Count: {count}</h1>
-
-      <button onClick={() => setCount (count+1)}>INC</button>
-      <button onClick={() => setCount (count-1)}>DES</button>
-
+      <button onClick={() =>setCount (count+1)}>INC</button>
+      <button onClick={() => setCount (count-1)}>DESC</button>
     </div>
   )
 }
 
 export default Counter;
-
-// https://jsonplaceholder.typicode.com/posts
-
-
-
-

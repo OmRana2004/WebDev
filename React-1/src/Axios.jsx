@@ -11,6 +11,11 @@ function Todo() {
             setTodos (res.data)
         })
     }, [])
+
+    /*
+    const res = await axios.get("fhdbvhfv")
+    const data = res.data
+   /*
     return(
             <div>
                 <h1>TODOS: </h1>

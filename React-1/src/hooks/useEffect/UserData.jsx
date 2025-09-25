@@ -1,20 +1,38 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
+import Spinner from "./Spinner";
 
 function UserData() {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // API Call
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(res => res.json())
-      .then(data => setUsers(data));
-  }, []); // empty array runs only on first render
+    // simulate network delay for testing spinner
+    setTimeout(() => {
+      axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((res) => {
+          setUsers(res.data);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }, 3000); // wait 3 seconds before making the API call
+  }, []);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div>
       <h2>Users Data:</h2>
-      
-      <table border="2" cellPadding="10" style={{ borderCollapse: "collapse", width: "100%" }}>
+
+      <table
+        border="2"
+        cellPadding="10"
+        style={{ borderCollapse: "collapse", width: "100%" }}
+      >
         <thead>
           <tr>
             <th>ID</th>
@@ -26,7 +44,7 @@ function UserData() {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
+          {users.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.name}</td>
@@ -38,7 +56,6 @@ function UserData() {
           ))}
         </tbody>
       </table>
-      
     </div>
   );
 }

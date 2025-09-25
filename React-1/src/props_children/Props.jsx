@@ -1,13 +1,11 @@
 const Welcome = ({name}) => {
-  return( <h1>Hello, {name} Welcome to react</h1> )
+  return <h1>Hello, {name} Welcome to react.!</h1>
 }
 
-function Props() {
-  return (
-    <div>
-      <Welcome name = "om" />
-    </div>
+export default function Props() {
+  return(
+    <>
+    <Welcome name = "om" />
+    </>
   )
 }
-
-export default Props;

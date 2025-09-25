@@ -16,7 +16,7 @@ function App() {
   return (
       <div>
         {/* <Counter /> */}
-        {/* <UserData /> */}
+        <UserData />
         {/* <LinkedinTopbar /> */}
         {/* <Error_Boundary /> */}
         {/* <Props title="iPhone" price="10000" /> */}
@@ -24,7 +24,7 @@ function App() {
          {/* <Props /> */}
          {/* <ProfileCard /> */}
         {/* <Card /> */}
-        <Axios />
+        {/* <Axios /> */}
       </div>
   )
 }
