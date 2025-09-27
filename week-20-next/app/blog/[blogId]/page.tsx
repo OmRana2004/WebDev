@@ -10,7 +10,8 @@ import axios from "axios";
       Title - {data.title}
         <br />
         Description - {data.body}
+        <br />
+        Author - {data.userId}  
     </div>
   )
 }
-
