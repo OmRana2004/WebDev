@@ -6,12 +6,12 @@ import axios from "axios";
    const data = res.data;
 
   return (
-    <div>
+      <div>
       Title - {data.title}
         <br />
         Description - {data.body}
         <br />
         Author - {data.userId}  
-    </div>
+        </div> 
   )
 }
