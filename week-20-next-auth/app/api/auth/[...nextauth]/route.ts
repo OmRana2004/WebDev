@@ -1,7 +1,6 @@
+import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 
-import NextAuth from "next-auth"
-import { use } from "react"
 
 const handler = NextAuth({
  providers: [
@@ -12,23 +11,14 @@ const handler = NextAuth({
             password: { lable: "Password", type: "password" }
         },
         async authorize(credentials, req) {
-            const username = credentials?.username
-            const password = credentials?.password
-            console.log(username, password)
-            // db related code here
-            const user = {
-                name: "Om",
-                id: "1",
-                username: "om@gmail.com"
+
+            return{
+             username: "om",
+             id: "1",
+             email: "om@gmail.com"
             }
-            if (user) {
-                return user
-            } else {
-                return null
-        }
         }
     })
- ] 
-})
-
+]
+});
 export { handler as GET, handler as POST }
