@@ -20,5 +20,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "pnpm": "^10.18.0",
+    "yarn": "^1.22.22"
+  }
 }
