@@ -15,7 +15,7 @@ export default function Home() {
         justifyContent: "center",
         flexDirection: "column",
       }}>
-        <TextInput placeholder="Room ID" />
+        <TextInput size="big" placeholder="Room ID" />
         <button>Join Room</button>
       </div>
     </div>
