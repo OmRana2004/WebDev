@@ -1,4 +1,4 @@
-import { TextInput } from "@repo/ui/text-input";
+import  {TextInput}  from "@repo/ui/text-input";
 
 export default function() {
     return <div style={{
@@ -6,10 +6,11 @@ export default function() {
         width: "100vw",
         display: "flex",
         justifyContent: "space-between",
-        flexDirection: "column"
+        flexDirection: "column",
+        alignItems: "center",
         }}>
-            <div>
-                Chat Room
+            <div >
+                <h1>Chat Room</h1>
             </div>
             <div>
                 <TextInput size="big" placeholder="Chat here"></TextInput>

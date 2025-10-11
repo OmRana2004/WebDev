@@ -3,15 +3,16 @@ interface PropType {
     size: "big" | "small";
 }
 
-export default function TextInput({
+export function TextInput({
     placeholder,
     size
 }: PropType) {
     return <input placeholder={placeholder} style={{
         padding: size === "big" ? 20 : 10,
         margin: size === "big" ? 20 : 10,
-        borderColor: "black",
-        borderWidth: 1,
+        borderColor: "red,yellow,blue",
+        borderWidth: 6,
+        borderRadius: 12,
     }}>   
     </input>
 }
