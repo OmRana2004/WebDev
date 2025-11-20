@@ -1,0 +1,15 @@
+1. Create tailwind.config.js file in your frontend root folder.
+
+2. /** @type {import('tailwindcss').Config} */
+export default {
+  theme: {
+    extend: {},
+  },
+};
+
+
+3. go to global.css and past :
+
+@import "tailwindcss";
+
+4. restart the server .. And All Set...

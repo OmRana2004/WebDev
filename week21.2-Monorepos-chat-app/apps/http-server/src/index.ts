@@ -3,6 +3,7 @@ import express from "express";
 const app = express();
 
 app.get("/signup", (req, res) => {
+    
     res.send("Signup endpoint");
 })
 
@@ -15,3 +16,4 @@ res.send("Chat endpoint");
 })
 
 app.listen(3001)
+
