@@ -1,0 +1,7 @@
+@import url('https://googleapis.com');
+@import "tailwindcss";
+
+@theme {
+  /* This overrides Tailwind's global default font stack */
+  --font-sans: "Inter", sans-serif;
+}
