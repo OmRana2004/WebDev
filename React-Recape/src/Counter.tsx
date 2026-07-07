@@ -4,12 +4,23 @@ export default function Counter() {
 
     const [count, setCount] = useState(0)
 
+   const Inc = () => {
+        setCount((pre) => pre+1)
+    }
+   const Des = () => {
+        setCount((pre) => pre-1)
+    }
+
     return (
-        <div>
-            <h1>COUNT:{count}</h1>
-            <button onClick={() => setCount(count + 1)}> 
-                increase
+        <div className="flex h-auto  items-center justify-center bg-amber-200 rounded-xl p-1.5 m-12">
+
+         <button onClick={Inc} className="bg-amber-700 rounded-xl p-1 m-1.5">
+                Add
             </button>
-        </div>
+         <button onClick={Des} className="bg-amber-700 rounded-xl p-1 m-1.5">
+                Sub
+            </button>
+            <p>Count: {count}</p>
+       </div>
     )
 }
