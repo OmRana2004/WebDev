@@ -1,7 +1,9 @@
 import { useState } from "react";
-import PostComp from "./Card";
+import PostCard from "./Card";
 import Counter from "./Counter"
 import Watch from "./Watch"
+import Child from "./Child";
+
 
 export default function App() {
   const [posts, setPosts] = useState<{ id: number  }[]>([]);
@@ -21,13 +23,21 @@ export default function App() {
       </button>
 
       {posts.map((_post, index) => {
-        return <PostComp key={index} />;
+        return <PostCard key={index} children={undefined} />;
       })}
     </div>
+
 <div className="px-8  flex items-center  gap-4 mask-top">
   <Counter />
   <Watch />
 </div>
+
+      <div>
+        <Child>
+          <h1>Hello om</h1>
+          <p>I am a Children</p>
+        </Child>
+      </div>
     </div>
   );
 }

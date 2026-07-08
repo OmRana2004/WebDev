@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Child from "./Child"
+import Card from "./Card"
 
 export default function Counter() {
 
@@ -21,6 +23,14 @@ export default function Counter() {
                 Sub
             </button>
             <p>Count: {count}</p>
+
+                <Child>
+                    <h1>I am a Children of Counter.</h1>
+                </Child>
+
+                <Card> 
+                   <></>
+                </Card>
        </div>
     )
 }

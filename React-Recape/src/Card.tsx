@@ -1,6 +1,7 @@
 import { useState } from "react"
+import Prop from "./Props"
 
-export default function PostComp() {
+export default function PostCard({children}: {children: React.ReactNode}) {
   // ✅ FIXED: Move state inside the component function
   // ✅ FIXED: Changed string "true" to a real boolean true
   const [toggel, setToggel] = useState(true)
@@ -10,6 +11,7 @@ export default function PostComp() {
 
   return(
     <div >
+      {children}
       <div className={`p-4 rounded-2xl flex gap-4 w-72 justify-between items-center ${
         isDark
         ? "bg-gray-900 text-white"
@@ -49,6 +51,10 @@ export default function PostComp() {
           <p>Count: {count}</p>
         </div>
       </div>
+
+        <Prop command="Yes Sir"/>
+        <Prop command="Hi Sir"/>
+
       </div>
   )
 }
