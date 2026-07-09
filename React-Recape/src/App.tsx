@@ -3,7 +3,7 @@ import PostCard from "./Card";
 import Counter from "./Counter"
 import Watch from "./Watch"
 import Child from "./Child";
-import MapKey from "./MapKey";
+import ListKeys from "./ListKeys";
 
 
 export default function App() {
@@ -41,7 +41,7 @@ export default function App() {
       </div>
 
       <div className="flex justify-center bg-amber-400">
-        <MapKey />
+        <ListKeys />
       </div>
       
     </div>
