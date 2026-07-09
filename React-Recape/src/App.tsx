@@ -3,6 +3,7 @@ import PostCard from "./Card";
 import Counter from "./Counter"
 import Watch from "./Watch"
 import Child from "./Child";
+import MapKey from "./MapKey";
 
 
 export default function App() {
@@ -27,17 +28,22 @@ export default function App() {
       })}
     </div>
 
-<div className="px-8  flex items-center  gap-4 mask-top">
+<div className=" flex items-center  gap-2">
   <Counter />
   <Watch />
 </div>
 
-      <div>
+      <div className="flex justify-center p-4">
         <Child>
           <h1>Hello om</h1>
           <p>I am a Children</p>
         </Child>
       </div>
+
+      <div className="flex justify-center bg-amber-400">
+        <MapKey />
+      </div>
+      
     </div>
   );
 }
