@@ -9,8 +9,8 @@ export default function ListKeys() {
 
     return (
         <div>
-            <Todo key = {1} title = {"Go to gym"} done= {false}/>,
-            <Todo key ={2} title = {"Practice Code Daily"} done= {true}/>,
+            <Todo key = {1} title = {"Go to gym"} done= {false}/>
+            <Todo key ={2} title = {"Practice Code Daily"} done= {true}/>
         </div>
     )
 }

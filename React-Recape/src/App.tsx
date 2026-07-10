@@ -4,6 +4,7 @@ import Counter from "./Counter"
 import Watch from "./Watch"
 import Child from "./Child";
 import ListKeys from "./ListKeys";
+import { Task } from "./Task";
 
 
 export default function App() {
@@ -42,6 +43,11 @@ export default function App() {
 
       <div className="flex justify-center bg-amber-400">
         <ListKeys />
+
+      </div>
+      
+      <div className="flex justify-center p-3">
+        <Task />
       </div>
       
     </div>
