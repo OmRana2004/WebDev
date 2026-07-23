@@ -1,42 +1,42 @@
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 
 interface ImageData {
   id: string;
+  author: string;
   download_url: string;
 }
 
 function App() {
-  const [images, setImages] = useState<ImageData[]>([]);
+  const [data, setData] = useState<ImageData[]>([]);
 
   const getData = async () => {
-    try {
-      const res = await axios.get(
-        "https://picsum.photos/v2/list?page=2&limit=30"
-      );
-      setImages(res.data);
-    } catch (error) {
-      console.error("Error fetching images:", error);
-    }
-  };
+    const res = await axios.get("https://picsum.photos/v2/list?page=2&limit=10")
+    setData(res.data)
+  } ;
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
-    <div className="bg-black min-h-screen p-4 text-white">
+    <div>
       <button
         onClick={getData}
-className="inline-flex items-center justify-center bg-green-600 active:scale-95 mb-3 px-5 py-2 rounded text-white"
+        className="bg-green-400 flex p-2 m-2 rounded-lg"
       >
-        Get data
+        Get Data
       </button>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {images.map((elem) => (
-          <img
-            key={elem.id}
-            src={elem.download_url}
-            alt="random"
-            className="w-full h-40 object-cover rounded"
-          />
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {data.map((image) => (
+          <div key={image.id} className="overflow-hidden rounded-lg bg-gray-800 p-2 shadow-lg">
+            <img src= {image.download_url} 
+            alt={image.author} 
+            className="h-24 w-full object-cover rounded"
+            />
+            <p className="mt-0.5 text-center text-sm font-semibold text-gray-600 pb-3">{image.author}</p>
+          </div>
         ))}
       </div>
     </div>
