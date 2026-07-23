@@ -9,24 +9,18 @@ interface ImageData {
 
 function App() {
   const [data, setData] = useState<ImageData[]>([]);
-
-  const getData = async () => {
-    const res = await axios.get("https://picsum.photos/v2/list?page=2&limit=10")
-    setData(res.data)
-  } ;
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
+    const getData = async () => {
+    const res = await axios.get(`https://picsum.photos/v2/list?page=${page}&limit=10`)
+    setData(res.data)
+  } ;
     getData();
-  }, []);
+  }, [page]);
 
   return (
     <div>
-      <button
-        onClick={getData}
-        className="bg-green-400 flex p-2 m-2 rounded-lg"
-      >
-        Get Data
-      </button>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((image) => (
@@ -38,6 +32,27 @@ function App() {
             <p className="mt-0.5 text-center text-sm font-semibold text-gray-600 pb-3">{image.author}</p>
           </div>
         ))}
+      </div>
+
+      <div className="flex item center justify-between p-4">
+
+        <button 
+        disabled = {page === 1}
+        onClick={() => setPage(page - 1)}
+        className={`rounded-lg px-4 py-2 ${
+           page === 1 
+           ? "bg-amber-400 opacity-50 cursor-not-allowed"
+           : "bg-amber-400 cursor-pointer"
+          }`}>
+          prev
+          </button>
+
+            <span className="font-bold text-lg">Page {page}</span>
+
+        <button onClick={() => setPage(page + 1)}
+        className="rounded-lg bg-amber-400 px-4 py-2 cursor-pointer">
+          next
+          </button>
       </div>
     </div>
   );
